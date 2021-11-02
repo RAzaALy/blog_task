@@ -1,6 +1,7 @@
 import React from "react";
 import { useGetBlogQuery } from "../services/finsApi";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 const BlogDetails = () => {
   const { id } = useParams();
   const { data, isFetching } = useGetBlogQuery(id);
@@ -43,7 +44,7 @@ const BlogDetails = () => {
           </div>
         </div>
         <div className="flex items-center justify-center mb-24">
-          <img src={data?.Image} alt="image" className="w-3/4 h-96" />
+          <img src={data?.Image} alt="Cardimage" className="w-3/4 h-96" />
         </div>
       </section>
       <section className="text-gray-600 body-font ">
@@ -55,7 +56,7 @@ const BlogDetails = () => {
                   {data?.Title}
                 </h2>
                 <p class="leading-relaxed">{data?.Subtitle}</p>
-                <a class="text-indigo-500 inline-flex items-center mt-4">
+                <Link to='/' class="text-indigo-500 inline-flex items-center mt-4">
                   Learn More
                   <svg
                     class="w-4 h-4 ml-2"
@@ -69,13 +70,13 @@ const BlogDetails = () => {
                     <path d="M5 12h14"></path>
                     <path d="M12 5l7 7-7 7"></path>
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
         <div className="flex items-center justify-center mb-24">
-          <img src={data?.Image} alt="image" className="w-3/4 h-96" />
+          <img src={data?.Image} alt="Secondimage" className="w-3/4 h-96" />
         </div>
       </section>
     </>

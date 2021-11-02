@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <>
       <section class="home homeSection mb-24" id="home">
-        <img src="./images/Image.png" />
+        <img src="./images/Image.png" alt='bannerImg'/>
 
         <div class="content" data-aos="fade-up" data-aos-duration="1000">
           <h1 className="text-center text-6xl text-white ">Our Blog</h1>

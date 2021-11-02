@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useGetBlogsQuery } from "../services/finsApi";
 import { BlogCard, Banner } from ".";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const { data, isFetching } = useGetBlogsQuery();
@@ -11,8 +11,8 @@ const Blog = () => {
     <>
      <Banner />
       <div className="mx-auto mb-4 flex justify-center items-center w-full imgContainer">
-        <a
-          href="#"
+        <Link
+          to='/'
           class="flex flex-col md:flex-row bg-white hover:bg-gray-100 border shadow-md items-center imgContainer"
         >
           <img
@@ -53,7 +53,7 @@ const Blog = () => {
               makes and models of cars, no matter the cause. This includes, We
               provide a full range of front end mechanical.
             </p>
-            <a class="text-indigo-500 inline-flex items-center mt-4">
+            <Link to='/' class="text-indigo-500 inline-flex items-center mt-4">
               Read More
               <svg
                 class="w-4 h-4 ml-2"
@@ -67,9 +67,9 @@ const Blog = () => {
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
-            </a>
+            </Link>
           </div>
-        </a>
+        </Link>
       </div>
 
       <section className="text-gray-600 body-font">
